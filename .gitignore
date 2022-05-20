@@ -2,7 +2,7 @@
 node_modules/
 
 *.swp
-dist/
+
 
 *.class
 
@@ -17,7 +17,6 @@ target/
 TEST*.xml
 
 node_modules
-/dist
 
 
 .env.local
