@@ -1,9 +1,3 @@
-// module.exports = {
-//   css: {
-//     loaderOptions: {
-//       sass: {
-//         additionalData: ' @import "@/assets/style.scss"; '
-//       }
-//     }
-//   }
-// }
+module.exports = {
+  publicPath: '/test-trivio/'
+}
