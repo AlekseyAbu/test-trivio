@@ -20,7 +20,7 @@ export default {
     show: false
   }),
   mounted() {
-    setTimeout(() => this.show = true, 1)
+    setTimeout(() => this.show = true, 0)
   },
   methods: {
     close(event) {
@@ -39,7 +39,6 @@ export default {
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
-  line-height: 110%;
   text-decoration: none;
   color: black;
   &:hover {
@@ -51,7 +50,6 @@ export default {
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
-  line-height: 110%;
   text-decoration: none;
   color: gray;
 }
@@ -65,7 +63,7 @@ export default {
 .profile {
   position: absolute;
   top: 70px;
-  right: 30px;
+  right: calc(50% - 470px);
   width: 200px;
   display: flex;
   flex-direction: column;
@@ -104,6 +102,11 @@ export default {
 .active {
   opacity: 1;
   transition: 1s;
+}
+@media screen and (max-width: 1024px) {
+  .profile {
+    right: 30px;
+  }
 }
 @media screen and (max-width: 785px) {
   .profile {

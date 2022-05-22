@@ -18,11 +18,10 @@
        </div>
        <div class="header__right__about" @click="showMenu = !showMenu">
          {{ abbrName }}
-         <Profile v-if="showMenu" @close-modal="close"/>
        </div>
        <Icon class="header__right__lang" :icon="lang ? 'ru' : 'us'" height="20" width="20" @click="lang = !lang"/>
      </div>
-
+     <Profile v-if="showMenu" @close-modal="close"/>
    </div>
 </template>
 <script>
@@ -57,7 +56,6 @@ export default {
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
-  line-height: 110%;
   text-decoration: none;
   color: black;
 }
@@ -72,6 +70,9 @@ export default {
 }
 
 .header {
+  max-width: 1024px;
+  margin: 0 auto;
+  position: relative;
   @extend %layout;
   padding: 10px 30px;
   background: #fff;
@@ -90,8 +91,7 @@ export default {
       position: relative;
       transition: 1s;
       &:hover {
-        @extend %btn;
-        background: #f5f5f5;
+        transform: scale(1.5);
       }
     }
     &__about {
@@ -118,8 +118,7 @@ export default {
   margin-right: 10px;
   transition: 1s;
   &:hover {
-    @extend %btn;
-    background: #f5f5f5;
+    color: gray;
   }
 }
 .badge {
